@@ -1,0 +1,16 @@
+version: "1"
+services:
+  idt_backend_v1_app_prod:
+    restart: always
+    image: idt_backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: idt_backend
+    environment:
+      ADMIN_EMAIL: idt@mtn.bj
+      ADMIN_PASSWORD: EBsj47w3*;uLDznKtUfvt
+    network_mode: "host"
+    ports:
+      - "8000:8000"
+    command: run
