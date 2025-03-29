@@ -14,9 +14,16 @@ class MakeRecommendationsAPIView(APIView):
         user_cluster = random.randint(1, 5)
 
         top_products = [
-            {"product": "Video Streaming", "confidence": 0.85},
-            {"product": "Gaming Premium", "confidence": 0.72},
-            {"product": "Music Unlimited", "confidence": 0.68}
+            {"product": "Video Streaming", "confidence": 0.85,
+                "description": "Enjoy unlimited access to video content platforms without interruptions"},
+            {"product": "Music Streaming", "confidence": 0.78,
+                "description": "Stream your favorite music without any data worries"},
+            {"product": "Gaming Premium", "confidence": 0.72,
+                "description": "Get exclusive access to premium gaming content and features"},
+            {"product": "Music Unlimited", "confidence": 0.68,
+                "description": "Unlimited access to all your favorite music and podcasts"},
+            {"product": "Video Unlimited", "confidence": 0.65,
+                "description": "Unlimited access to all your favorite movies and series without data limits"},
         ]
 
         preferred_channels = ["myMTN", "USSD", "Ayoba"]
